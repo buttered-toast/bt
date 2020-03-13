@@ -61,6 +61,8 @@ pre {
   border: 1px solid #ccc;
   background-color: #eee;
   font-family: monospace;
+  direction: ltr;
+  text-align: left;
 }
 
 /*

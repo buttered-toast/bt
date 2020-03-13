@@ -1,0 +1,5 @@
+define('CONCATENATE_SCRIPTS', false);
+
+define('WP_AUTO_UPDATE_CORE', false);
+
+define('WP_DEBUG', true);

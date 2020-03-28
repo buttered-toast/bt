@@ -66,6 +66,12 @@ Class Helper {
 		$css_files_content = preg_replace('/\s*([:;{}])\s*/','$1',$css_files_content);
 		$css_files_content = preg_replace('/;}/','}',$css_files_content);
 	}
+    
+    // basic php error loger using print_r
+    static public function _error_log ($value) {
+        error_log(print_r($value, true), 3, __DIR__ . '/temp-log.txt');
+        error_log("\r\n\r\n", 3, __DIR__ . '/temp-log.txt');
+    }
 	
 	// get the image alt text
 	static public function get_image_alt (&$image) {

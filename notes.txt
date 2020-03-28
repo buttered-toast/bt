@@ -1,5 +1,5 @@
-define('CONCATENATE_SCRIPTS', false);
+// Disable all wordpress auto updates. 
+define('AUTOMATIC_UPDATER_DISABLED', true);
 
-define('WP_AUTO_UPDATE_CORE', false);
-
+// Make wordpress display all PHP errors
 define('WP_DEBUG', true);

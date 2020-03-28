@@ -126,7 +126,11 @@ Class Helper {
 		];
 
 		if (is_array($field_output)) {
-			$field_output = $field_output[0];
+            if (!empty($field_output)) {
+                $field_output = $field_output[0];
+            } else {
+                $field_output = '';
+            }
 		}
 
 		switch ($field_type) {

@@ -4,7 +4,7 @@
 \* basic html structure */
 ?>
 <!doctype html>
-<html lang="he" dir="rtl">
+<html lang="en" >
   <head>
     <meta charset="UTF-8">
     <title><?php the_title(); ?></title>

@@ -3,11 +3,11 @@
 /** add an options page from the ACF plugin **/
 if (function_exists('acf_add_options_page')) {
 	$titles = [
-		'parent'  => __('הגדרות כלליות של התבנית', 'bt'),
-		'header'  => __('הגדרות HEADER של התבנית', 'bt'),
-		'footer'  => __('הגדרות FOOTER של התבנית', 'bt'),
-		'contact' => __('הגדרות יצירת קשר של התבנית', 'bt'),
-		'social'  => __('הגדרות מדיה חברתית של התבנית', 'bt')
+		'parent'  => __('General theme options', 'bt'),
+		'header'  => __('Header theme options', 'bt'),
+		'footer'  => __('Footer theme options', 'bt'),
+		'contact' => __('Contact theme options', 'bt'),
+		'social'  => __('Social media theme options', 'bt')
 	];
 	
 	$parent = acf_add_options_page([

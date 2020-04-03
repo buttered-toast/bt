@@ -11,15 +11,15 @@
 */
 
 // on page scroll ...
-jQuery(window).scroll(function () {
-  var ce = jQuery(this);
+// jQuery(window).scroll(function () {
+//   var ce = jQuery(this);
 
-  if (ce.scrollTop() > 0) {
-    // scrolled action
-  } else {
-    // at top of page action
-  }
-});
+//   if (ce.scrollTop() > 0) {
+//     // scrolled action
+//   } else {
+//     // at top of page action
+//   }
+// });
 
 // custom lazy load for images and background images
 function bt_lazy_load_img(scroll_position) {

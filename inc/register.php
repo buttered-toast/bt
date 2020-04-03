@@ -4,8 +4,8 @@
 add_action('init', 'bt_register_theme_menus');
 function bt_register_theme_menus () {
 	$args = [
-		'main-site-menu' => __('תפריט ראשי עליון', 'bt'),
-		'main-site-footer-menu' => __('תפריט ראשי תחתון', 'bt')
+		'main-site-menu'        => __('Header menu', 'bt'),
+		'main-site-footer-menu' => __('Footer menu', 'bt')
 	];
 
 	register_nav_menus($args);

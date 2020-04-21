@@ -119,11 +119,11 @@ body * {
   background-size: contain;
 }
 
-.content-no-margin-first-last > :first-child {
+.content-no-margin-top-bottom > :first-child {
   margin-top: 0;
 }
 
-.content-no-margin-first-last > :last-child {
+.content-no-margin-top-bottom > :last-child {
   margin-bottom: 0;
 }
 

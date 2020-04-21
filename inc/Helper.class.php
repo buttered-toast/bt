@@ -72,6 +72,28 @@ Class Helper {
         error_log(print_r($value, true), 3, BDIR . '/temp-log.txt');
         error_log("\r\n\r\n", 3, BDIR . '/temp-log.txt');
     }
+    
+    // output the content
+    static public function the_content () {
+        if (have_posts()) {
+            while (have_posts()) {
+                the_post();
+                
+                the_content();
+            }
+        }
+    }
+    
+    // return the content
+    static public function get_the_content () {
+        if (have_posts()) {
+            while (have_posts()) {
+                the_post();
+                
+                return get_the_content();
+            }
+        }
+    }
 	
 	// get the image alt text
 	static public function get_image_alt (&$image) {

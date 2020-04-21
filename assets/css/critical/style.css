@@ -65,6 +65,13 @@ pre {
   text-align: left;
 }
 
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
 /*
 //======================================================================
 // CUSTOM RESETS - END
@@ -96,6 +103,28 @@ body * {
 .bt-lazy-load {
   width: 100% !important;
   height: 300px !important;
+}
+
+.bg-cover,
+.bg-contain {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.content-no-margin-first-last > :first-child {
+  margin-top: 0;
+}
+
+.content-no-margin-first-last > :last-child {
+  margin-bottom: 0;
 }
 
 /*

@@ -40,8 +40,6 @@ add_action('wp_enqueue_scripts', 'bt_enqueue_scripts');
 function bt_enqueue_scripts () {
 	wp_enqueue_script('bt-main', TEMPLATE_DIRECTORY_URI . '/assets/js/script.js' . FILES_VERSION, ['jquery'], '', true);
 
-	// this is a placeholder for all the js variables, load them manualy when needed in the header.php
-	/*
 	$args = [
 		'ajax_nonce' => wp_create_nonce('bt_site_ajax_nonce'),
 		'ajaxurl'    => BPATH . '/wp-admin/admin-ajax.php'
@@ -50,7 +48,8 @@ function bt_enqueue_scripts () {
 		'CPATH'   	 => CPATH,
 		'TINYGIF' 	 => TINYGIF
 	];
-	*/
+  
+    wp_localize_script('bt-main', 'system_globals', $args);
 	
 	if (is_front_page()) {
 		wp_enqueue_script('bt-front-page', TEMPLATE_DIRECTORY_URI . '/assets/js/pages/front-page.js' . FILES_VERSION, ['jquery'], '', true);

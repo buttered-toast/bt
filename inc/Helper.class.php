@@ -69,8 +69,30 @@ Class Helper {
     
     // basic php error loger using print_r
     static public function _error_log ($value) {
-        error_log(print_r($value, true), 3, __DIR__ . '/temp-log.txt');
-        error_log("\r\n\r\n", 3, __DIR__ . '/temp-log.txt');
+        error_log(print_r($value, true), 3, BDIR . '/temp-log.txt');
+        error_log("\r\n\r\n", 3, BDIR . '/temp-log.txt');
+    }
+    
+    // output the content
+    static public function the_content () {
+        if (have_posts()) {
+            while (have_posts()) {
+                the_post();
+                
+                the_content();
+            }
+        }
+    }
+    
+    // return the content
+    static public function get_the_content () {
+        if (have_posts()) {
+            while (have_posts()) {
+                the_post();
+                
+                return get_the_content();
+            }
+        }
     }
 	
 	// get the image alt text

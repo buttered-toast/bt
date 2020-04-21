@@ -69,8 +69,8 @@ Class Helper {
     
     // basic php error loger using print_r
     static public function _error_log ($value) {
-        error_log(print_r($value, true), 3, __DIR__ . '/temp-log.txt');
-        error_log("\r\n\r\n", 3, __DIR__ . '/temp-log.txt');
+        error_log(print_r($value, true), 3, BDIR . '/temp-log.txt');
+        error_log("\r\n\r\n", 3, BDIR . '/temp-log.txt');
     }
 	
 	// get the image alt text

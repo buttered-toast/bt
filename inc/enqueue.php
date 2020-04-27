@@ -42,7 +42,7 @@ function bt_enqueue_scripts () {
 
 	$args = [
 		'ajax_nonce' => wp_create_nonce('bt_site_ajax_nonce'),
-		'ajaxurl'    => BPATH . '/wp-admin/admin-ajax.php'
+		'ajaxurl'    => BPATH . '/wp-admin/admin-ajax.php',
 		'BPATH'   	 => BPATH,
 		'FPATH'   	 => FPATH,
 		'CPATH'   	 => CPATH,

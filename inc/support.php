@@ -11,3 +11,6 @@ add_action('after_setup_theme', 'bt_html5_script_and_styles_format');
 function bt_html5_script_and_styles_format () {
 	add_theme_support('html5', ['script', 'style']);
 }
+
+// lets the wordpress manage the documnet title
+add_theme_support('title-tag');

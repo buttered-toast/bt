@@ -102,3 +102,17 @@ function bt_remove_wp_nodes () {
 	
 	$wp_admin_bar->remove_node('new-content');
 }
+
+// remove default jquery and jquery migrate and load jquery 1.12.4
+add_action('init', 'jquery_cdn');
+function jquery_cdn() {
+  if (!is_admin()) {
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js', false, '1.12.4');
+    wp_enqueue_script('jquery');
+  }
+}
+
+// remove WPML Generator
+global $sitepress;
+remove_action( 'wp_head', array( $sitepress, 'meta_generator_tag' ) );

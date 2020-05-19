@@ -106,12 +106,14 @@ body * {
 }
 
 .bg-cover,
-.bg-contain {
+.bg-contain,
+.site-bg {
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.bg-cover {
+.bg-cover,
+.site-bg {
   background-size: cover;
 }
 

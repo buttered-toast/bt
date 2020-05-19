@@ -3,9 +3,6 @@
 define('BDIR', __DIR__);
 define('THEME_DIR', WP_CONTENT_DIR . '/themes/bt/');
 
-// clear cache for admins (can remove when site is live)
-require THEME_DIR . 'inc/cache.php';
-
 // setting php headers
 require THEME_DIR . 'inc/headers.php';
 
@@ -32,6 +29,9 @@ require THEME_DIR . 'inc/register.php';
 
 // remove wordpress core features
 require THEME_DIR . 'inc/remove-core-features.php';
+
+// everything pluign hooks
+//require THEME_DIR . 'inc/plugin-hooks.php';
 
 // Everything ajax
 //require THEME_DIR . 'inc/ajax.php';

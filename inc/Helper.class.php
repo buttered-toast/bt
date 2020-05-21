@@ -476,7 +476,7 @@ Class Helper {
       'link'
     ];
 
-    if (defined(ICL_LANGUAGE_CODE)) {
+    if (defined('ICL_LANGUAGE_CODE')) {
       if (BASE_LANG != ICL_LANGUAGE_CODE) {
         $options_prefix .= ICL_LANGUAGE_CODE . '_';
       }

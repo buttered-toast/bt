@@ -118,6 +118,50 @@ Class Helper {
 
     $image_data = $image;
   }
+  
+  static public function get_image_html ($image_id, &$image_html) {
+		$image 	= get_post($image_id);
+		$srcset = esc_attr(wp_get_attachment_image_srcset($image_id, 'full'));
+		$sizes 	= esc_attr(wp_get_attachment_image_sizes($image_id, 'full'));
+		
+		if (!empty($image)) {
+			$image_src = wp_get_attachment_image_src($image_id, 'full');
+
+			if (!empty($image_src) && is_array($image_src)) {
+				$image->src = $image_src[0];
+			} else {
+				$image->src = '';
+			}
+		}
+		
+		self::get_image_alt($image);
+		
+		$alt = esc_attr($image->alt);
+		
+		$image_html = "<img src=\"{$image->src}\" srcset=\"{$srcset}\" sizes=\"{$sizes}\" alt=\"{$alt}\">";
+	}
+	
+	static public function the_image_html ($image_id) {
+		$image 	= get_post($image_id);
+		$srcset = esc_attr(wp_get_attachment_image_srcset($image_id, 'full'));
+		$sizes 	= esc_attr(wp_get_attachment_image_sizes($image_id, 'full'));
+		
+		if (!empty($image)) {
+			$image_src = wp_get_attachment_image_src($image_id, 'full');
+
+			if (!empty($image_src) && is_array($image_src)) {
+				$image->src = $image_src[0];
+			} else {
+				$image->src = '';
+			}
+		}
+		
+		self::get_image_alt($image);
+		
+		$alt = esc_attr($image->alt);
+		
+		echo "<img src=\"{$image->src}\" srcset=\"{$srcset}\" sizes=\"{$sizes}\" alt=\"{$alt}\">";
+	}
 
   //======================================================================
   // GENERAL - END

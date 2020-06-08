@@ -31,16 +31,13 @@ require THEME_DIR . 'inc/register.php';
 require THEME_DIR . 'inc/remove-core-features.php';
 
 // everything pluign hooks
-//require THEME_DIR . 'inc/plugin-hooks.php';
+require THEME_DIR . 'inc/plugins.php';
 
 // Everything ajax
-//require THEME_DIR . 'inc/ajax.php';
+require THEME_DIR . 'inc/ajax.php';
 
 // Theme actions
-//require THEME_DIR . 'inc/actions.php';
+require THEME_DIR . 'inc/actions.php';
 
 // Theme filters
-//require THEME_DIR . 'inc/filters.php';
-
-// add woocommerce support, custom actions, filters and template exstansions
-//require THEME_DIR . 'inc/woocommerce.php';
+require THEME_DIR . 'inc/filters.php';

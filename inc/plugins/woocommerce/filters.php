@@ -1,12 +1,18 @@
 <?php if (!defined('ABSPATH')) {exit;}
 
-/** INDEX **\
+//======================================================================
+// INDEX
+//======================================================================
+/*
 
 = GENERAL
-- Remove
-|_ add_filter('woocommerce_enqueue_styles', 'bt_dequeue_woocommerce_styles');
-
-\** INDEX **/
+ - Remove
+  |_ // add_filter('woocommerce_enqueue_styles', 'bt_dequeue_woocommerce_styles');
+  
+*/
+//======================================================================
+// INDEX - END
+//======================================================================
 
 //======================================================================
 // GENERAL
@@ -17,7 +23,7 @@
 //-----------------------------------------------------
 
 // unset all default styles
-//add_filter('woocommerce_enqueue_styles', 'bt_dequeue_woocommerce_styles');
+// add_filter('woocommerce_enqueue_styles', 'bt_dequeue_woocommerce_styles');
 function bt_dequeue_woocommerce_styles ($enqueue_styles) {
   if (WOOCOMMERCE_CONDITIONAL_FUNCTIONS_HERE) {
     $style_handles = [

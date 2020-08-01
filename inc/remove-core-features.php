@@ -2,7 +2,6 @@
 
 // remove generator (wordpress version tag)
 remove_action('wp_head', 'wp_generator');
-
 add_filter('the_generator', 'bt_remove_wp_generator');
 function bt_remove_wp_generator () {
 	return '';
@@ -116,3 +115,6 @@ function jquery_cdn() {
 // remove WPML Generator
 global $sitepress;
 remove_action( 'wp_head', array( $sitepress, 'meta_generator_tag' ) );
+
+// Remove dns-prefetch Link from WordPress Head (Frontend)
+remove_action('wp_head', 'wp_resource_hints', 2);

@@ -1,4 +1,7 @@
-/*** INDEX ***\
+/*
+//======================================================================
+// INDEX
+//======================================================================
 
 = NORMALIZE
 
@@ -6,7 +9,10 @@
 
 = WHOLE SITE STYLES
 
-\*** END INDEX ***/
+//======================================================================
+// INDEX - END
+//======================================================================
+*/
 
 /*
 //======================================================================
@@ -70,6 +76,8 @@ button {
   background-color: transparent;
   border: none;
   border-radius: 0;
+  cursor: pointer;
+  outline: unset;
 }
 
 /*
@@ -86,8 +94,11 @@ button {
 
 :root {}
 
-body {
+html {
   font-size: 16px;
+}
+
+body {
   font-family: sans-serif;
 
   /** temp **/
@@ -127,6 +138,17 @@ body * {
 
 .content-no-margin-top-bottom > :last-child {
   margin-bottom: 0;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 /*

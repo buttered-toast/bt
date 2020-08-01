@@ -1,3 +1,5 @@
+// thise goes into the wp-config.php
+
 // Disable all wordpress auto updates. 
 define('AUTOMATIC_UPDATER_DISABLED', true);
 

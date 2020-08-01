@@ -1,6 +1,6 @@
 <?php if (!defined('ABSPATH')) {exit;}
 
-/** add an options page from the ACF plugin **/
+// add an options page from the ACF plugin
 if (function_exists('acf_add_options_page')) {
 	$titles = [
 		'parent'  => __('General theme options', 'bt'),

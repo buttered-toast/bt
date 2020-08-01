@@ -1,5 +1,6 @@
 <?php if (!defined('ABSPATH')) {exit;}
 
+// add all necessary site headers
 add_action('send_headers', 'bt_add_headers');
 function bt_add_headers () {
 	header('x-Powered-By: bt');

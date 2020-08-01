@@ -1,6 +1,9 @@
 <?php if (!defined('ABSPATH')) {exit;}
 
+// set the base root directory path
 define('BDIR', __DIR__);
+
+// set the base theme directory path
 define('THEME_DIR', WP_CONTENT_DIR . '/themes/bt/');
 
 // setting php headers

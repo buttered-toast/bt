@@ -120,6 +120,10 @@ Class Helper {
 		if (isset($link['target'])) {
 			$link['target'] = (!empty($link['target'])) ? $link['target'] : '_self';
 		}
+		
+		if (isset($link['url'])) {
+			$link['url'] = urldecode(esc_url($link['url']));
+		}
 	}
 
 	//======================================================================

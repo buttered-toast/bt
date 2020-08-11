@@ -144,7 +144,11 @@ Class Helper {
 
 		if (is_array($field_output)) {
 			if (!empty($field_output)) {
-				$field_output = $field_output[0];
+				if ($field_type == 'relationship') {
+					$field_output = $field_output;
+				} else {
+					$field_output = $field_output[0];
+				}
 			} else {
 				$field_output = '';
 			}

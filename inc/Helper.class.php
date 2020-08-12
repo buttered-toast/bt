@@ -451,6 +451,8 @@ Class Helper {
 			}
 		}
 
+		$raw_field_data = null;
+		
 		if ((isset($args[2]) && $args[2] !== 'null') && isset($args[3])) {
 			switch ($args[2]) {
 				case 'option':

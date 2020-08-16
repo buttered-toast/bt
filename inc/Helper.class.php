@@ -125,6 +125,17 @@ Class Helper {
 			$link['url'] = urldecode(esc_url($link['url']));
 		}
 	}
+	
+	// output/get the current wordpress version
+	static public function wp_version ($return = false) {
+		$wp_version = get_bloginfo('version');
+		
+		if ($return) {
+			return $wp_version;
+		}
+		
+		echo $wp_version;
+	}
 
 	//======================================================================
 	// GENERAL - END

@@ -451,7 +451,7 @@ Class Helper {
 			}
 		}
 
-		$raw_field_data = null;
+		$raw_field_data = '';
 		
 		if ((isset($args[2]) && $args[2] !== 'null') && isset($args[3])) {
 			switch ($args[2]) {

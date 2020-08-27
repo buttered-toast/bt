@@ -569,3 +569,10 @@ Class Helper {
 	// ADVANCED CUSTOM FIELDS - acf helpers - END
 	//======================================================================
 }
+
+// Alias for Helper::_dd($value); | For ziv
+if (!function_exists('dd')) {
+	function dd ($value) {
+		Helper::_dd($value);
+	}
+}

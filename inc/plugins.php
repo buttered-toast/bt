@@ -42,7 +42,7 @@ require THEME_DIR . 'inc/plugins/woocommerce/template-ext.php';
 //======================================================================
 
 // all the actions/filters (I don't split it into multiple files because usualy there isn't much code for this plugin)
-require THEME_DIR . 'inc/plugins/navxt/navxt.php';
+//require THEME_DIR . 'inc/plugins/navxt/navxt.php';
 
 //======================================================================
 // NAVXT - END

@@ -240,23 +240,25 @@ Class Helper {
 			case ($field_type === 'gallery' || (strpos($field_type, 'gallery') !== false)):
 				$gallery_images = [];
 
-				switch ($field_type) {
-					case 'gallery':
-						foreach ($field_output as $image_id) {
-							self::get_image($image_id, 'full', $image);
-							$gallery_images[] = $image;
-						}
+				if (!empty($field_output)) {
+					switch ($field_type) {
+						case 'gallery':
+							foreach ($field_output as $image_id) {
+								self::get_image($image_id, 'full', $image);
+								$gallery_images[] = $image;
+							}
 
-						break;
-					case (strpos($field_type, ',') !== false):
-						$field_output_parts = explode(',', $field_type);
+							break;
+						case (strpos($field_type, ',') !== false):
+							$field_output_parts = explode(',', $field_type);
 
-						foreach ($field_output as $image_id) {
-							self::get_image($image_id, $field_output_parts[1], $image);
-							$gallery_images[] = $image;
-						}
+							foreach ($field_output as $image_id) {
+								self::get_image($image_id, $field_output_parts[1], $image);
+								$gallery_images[] = $image;
+							}
 
-						break;
+							break;
+					}
 				}
 
 				$return_field = $gallery_images;

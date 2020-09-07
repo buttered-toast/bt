@@ -7,7 +7,7 @@ Class Helper {
 
 	// php debugging tool
 	static public function _dd ($value, $result_output_as = 'print', $die = false) {
-		echo '<div class="dir="ltr""><pre>';
+		echo '<div dir="ltr"><pre>';
 
 		switch (strtolower($result_output_as)) {
 			case 'print':

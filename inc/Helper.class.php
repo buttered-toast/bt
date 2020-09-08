@@ -511,6 +511,12 @@ Class Helper {
 				}
 			}
 		} else {
+			if ($args[1] === 'relationship') {
+				if ($args[2] === 'option') {
+					$raw_field_data = [$raw_field_data];
+				}
+			}
+			
 			self::handle_field($args[1], $raw_field_data, $formated_field_data);
 
 			$field = $formated_field_data;

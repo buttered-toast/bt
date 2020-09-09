@@ -327,6 +327,10 @@ Class Helper {
 			case ($field_type === 'taxonomy' || (strpos($field_type, 'taxonomy') !== false)):
 				$terms = [];
 
+				if (!is_array($field_output)) {
+					$field_output = [$field_output];
+				}
+				
 				switch ($field_type) {
 					case 'taxonomy':
 						foreach ($field_output as $term_id) {

@@ -45,6 +45,6 @@ function bt_enqueue_scripts () {
   wp_localize_script('bt-main', 'system_globals', $args);
 
   if (is_front_page()) {
-    wp_enqueue_script('bt-front-page-ltr', TEMPLATE_DIRECTORY_URI . '/assets/js/pages/front-page.js' . FILES_VERSION, ['jquery'], '', true);
+    wp_enqueue_script('bt-front-page', TEMPLATE_DIRECTORY_URI . '/assets/js/pages/front-page.js' . FILES_VERSION, ['jquery'], '', true);
   }
 }
